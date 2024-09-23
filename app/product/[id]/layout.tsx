@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
+import React from 'react'
 
-async function getProduct(id: string) {
+async function getProduct() {
   // Implement your product fetching logic here
   // This is a placeholder implementation
   return {
@@ -10,8 +11,8 @@ async function getProduct(id: string) {
   }
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const product = await getProduct(params.id)
+export async function generateMetadata(): Promise<Metadata> {
+  const product = await getProduct()
 
   return {
     title: `${product.name} | Your Jewelry Store`,
@@ -24,7 +25,13 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   }
 }
 
-export default function Layout({ children, params: { id } }: { children: React.ReactNode; params: { id: string } }) {
-  // Remove the 'id' parameter if it's not being used
-  return <>{children}</>;
+// Update ./app/product/[id]/layout.tsx
+
+// Remove the 'params' parameter if it's not being used
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="container mx-auto px-4 py-8">
+      {children}
+    </div>
+  )
 }

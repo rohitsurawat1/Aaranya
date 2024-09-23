@@ -10,26 +10,26 @@ export default function WishlistPage() {
   const { wishlist, removeFromWishlist, addToCart, clearWishlist } = useShop()
 
   return (
-    <div className="flex flex-col min-h-screen bg-white text-black">
+    <div className="flex flex-col min-h-screen bg-gray-50 text-gray-900">
       <div className="flex-grow container mx-auto px-4 py-16 pt-60">
-        <h1 className="text-3xl font-bold mb-8 text-black">Your Wishlist</h1>
+        <h1 className="text-4xl font-extrabold mb-8 text-center">Your Wishlist</h1>
         {wishlist.length === 0 ? (
-          <p>Your wishlist is empty.</p>
+          <p className="text-center text-lg">Your wishlist is empty.</p>
         ) : (
           <>
-            {wishlist.map(item => (
-              <div key={item.id} className="flex items-center justify-between border-b py-4">
-                <div className="flex items-center">
-                  <Image src={item.image} alt={item.name} width={80} height={80} className="mr-4" />
-                  <h2 className="font-semibold">{item.name}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {wishlist.map(item => (
+                <div key={item.id} className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                  <Image src={item.image} alt={item.name} width={150} height={150} className="rounded-lg mb-4" />
+                  <h2 className="font-semibold text-xl mb-2">{item.name}</h2>
+                  <div className="flex space-x-2 mt-auto">
+                    <Button className="mr-2" onClick={() => addToCart(item)}>Add to Cart</Button>
+                    <Button variant="destructive" onClick={() => removeFromWishlist(item.id)}>Remove</Button>
+                  </div>
                 </div>
-                <div>
-                  <Button className="mr-2" onClick={() => addToCart(item)}>Add to Cart</Button>
-                  <Button variant="destructive" onClick={() => removeFromWishlist(item.id)}>Remove</Button>
-                </div>
-              </div>
-            ))}
-            <div className="mt-8">
+              ))}
+            </div>
+            <div className="mt-12 text-center">
               <Button variant="outline" onClick={clearWishlist}>Clear Wishlist</Button>
             </div>
           </>

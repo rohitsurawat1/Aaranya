@@ -114,7 +114,7 @@ export default function ProductPage() {
   }
 
   return (
-    <div className="bg-white pt-24 md:pt-32 ">
+    <div className="bg-white pt-24 md:pt-32">
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-8">
 
@@ -174,7 +174,7 @@ export default function ProductPage() {
 
             {/* Product info */}
             <div className="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0">
-              <h1 className="text-3xl font-extrabold tracking-tight text-gray-900">{product.name}</h1>
+              <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 font-serif">{product.name}</h1>
 
               <div className="mt-3">
                 <h2 className="sr-only">Product information</h2>
@@ -221,18 +221,19 @@ export default function ProductPage() {
       </main>
 
       {/* Our Story Section */}
-      <section className="bg-gray-50 py-16 sm:py-24">
+      <section className="bg-gradient-to-r from-gray-50 to-white py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">Our Story</h2>
+          <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-12 font-serif">Our Story</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
               <Image
                 src="/images/artisan-workshop.jpg"
                 alt="Artisan in workshop"
                 width={600}
                 height={400}
-                className="rounded-lg shadow-lg"
+                className="object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             </div>
             <div>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
@@ -247,27 +248,28 @@ export default function ProductPage() {
       </section>
 
       {/* Meet Our Master Artisan Section */}
-      <section className="bg-white py-16 sm:py-24">
+      <section className="bg-gradient-to-r from-white to-gray-50 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">Meet Our Master Artisan</h2>
+          <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-12 font-serif">Meet Our Master Artisan</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Amira: The Soul Behind Our Creations</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 font-serif">Amira: The Soul Behind Our Creations</h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                Amira's journey in jewelry making began at the tender age of seven, watching her grandmother's deft fingers weave magic with gold and gems. Today, with over three decades of experience, Amira leads our team of artisans, infusing each piece with passion and precision.
+                Amira&apos;s journey in jewelry making began at the tender age of seven, watching her grandmother&apos;s deft fingers weave magic with gold and gems. Today, with over three decades of experience, Amira leads our team of artisans, infusing each piece with passion and precision.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed">
-                "Every jewel has a story," Amira often says, "and it's our privilege to bring that story to life." Her innovative designs, rooted in tradition yet reaching for the stars, have garnered international acclaim and adorned celebrities and royalty alike.
+                &quot;Every jewel has a story,&quot; Amira often says, &quot;and it&apos;s our privilege to bring that story to life.&quot; Her innovative designs, rooted in tradition yet reaching for the stars, have garnered international acclaim and adorned celebrities and royalty alike.
               </p>
             </div>
-            <div className="order-1 md:order-2">
+            <div className="relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 order-1 md:order-2">
               <Image
                 src="/images/master-artisan.jpg"
                 alt="Master Artisan Amira"
                 width={600}
                 height={400}
-                className="rounded-lg shadow-lg"
+                className="object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             </div>
           </div>
         </div>
@@ -279,11 +281,11 @@ export default function ProductPage() {
             &ldquo;The jewelry you wear is a reflection of your personality.&rdquo; - Coco Chanel
           </p>
           <p className="text-center text-gray-600 mb-8">
-            Don't see what you're looking for? <Link href="/contact" className="text-black underline">Contact us</Link> for custom orders.
+            Don&apos;t see what you&apos;re looking for? <Link href="/contact" className="text-black underline">Contact us</Link> for custom orders.
           </p>
           <div className="bg-white p-6 rounded-lg shadow-md">
             <p className="text-center text-gray-800 font-semibold">
-              &ldquo;I couldn't be happier with my purchase! The quality is outstanding.&rdquo; - Sarah M.
+              &ldquo;I couldn&apos;t be happier with my purchase! The quality is outstanding.&rdquo; - Sarah M.
             </p>
           </div>
         </div>
