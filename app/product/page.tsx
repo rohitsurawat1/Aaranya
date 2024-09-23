@@ -7,9 +7,9 @@ const ProductPage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow">
+      <main className="flex-grow bg-white">
         <Product />
-        <h1 className="text-4xl font-bold text-center my-8">Product Details</h1>
+        {/* <h1 className="text-4xl font-bold text-center my-8">Product Details</h1> */}
         {/* Add more product-specific content here */}
       </main>
       <Footer />

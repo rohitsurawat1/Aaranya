@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 const JewelryPage = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-white text-black">
+    <div className="flex flex-col min-h-screen bg-white text-black pt-8">
       <Header />
       <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 mt-8 sm:mt-12 md:mt-16 lg:mt-24">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 font-sans">
@@ -42,12 +42,11 @@ const JewelryPage = () => {
             </div>
           </div>
         </div>
-        <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8 md:mb-10 text-center">Featured Pieces</h2>
+        <div className="mt-4 sm:mt-6 md:mt-8 lg:mt-10">
           <Product />
         </div>
       </main>
-      <Footer />
+      <Footer/>
     </div>
   )
 }
